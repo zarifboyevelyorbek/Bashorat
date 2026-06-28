@@ -1,0 +1,130 @@
+.profile-form-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 80% 80%, #2a1f4d 0%, #1a1530 55%, #120e22 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.profile-form {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(245, 241, 232, 0.04);
+  border: 1px solid rgba(232, 184, 75, 0.2);
+  border-radius: 20px;
+  padding: 36px 32px;
+  backdrop-filter: blur(8px);
+}
+
+.profile-form__title {
+  font-family: "Georgia", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #f5f1e8;
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.profile-form__label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #c5beda;
+  margin-bottom: 18px;
+}
+
+.profile-form__input,
+.profile-form__textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #f5f1e8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(232, 184, 75, 0.25);
+  border-radius: 10px;
+  padding: 11px 14px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.profile-form__input::placeholder,
+.profile-form__textarea::placeholder {
+  color: #8a82a3;
+}
+
+.profile-form__input:focus,
+.profile-form__textarea:focus {
+  outline: none;
+  border-color: #e8b84b;
+  box-shadow: 0 0 0 3px rgba(232, 184, 75, 0.15);
+}
+
+.profile-form__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.profile-form__chip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #c5beda;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(232, 184, 75, 0.2);
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.profile-form__chip--active {
+  background: #e8b84b;
+  color: #1a1530;
+  border-color: #e8b84b;
+  font-weight: 600;
+}
+
+.profile-form__chip:focus-visible {
+  outline: 2px solid #f5f1e8;
+  outline-offset: 2px;
+}
+
+.profile-form__error {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #f29c9c;
+  margin: 4px 0 16px;
+}
+
+.profile-form__submit {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1530;
+  background: #e8b84b;
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.profile-form__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.profile-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-form__submit:focus-visible {
+  outline: 3px solid #f5f1e8;
+  outline-offset: 3px;
+}

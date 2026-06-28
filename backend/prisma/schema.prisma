@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Prediction {
+  id          String   @id @default(uuid())
+  name        String
+  age         Int
+  interests   String[]
+  dream       String
+  profession  String?
+  resultText  String   @db.Text
+  shareSlug   String   @unique
+  createdAt   DateTime @default(now())
+}
